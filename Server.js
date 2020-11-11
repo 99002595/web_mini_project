@@ -22,7 +22,7 @@ app.get("/events", (req, res)=>{
     readData();
     res.send(JSON.stringify(events));    
 });
-app.get("/events/:id", (req, res)=>{
+app.get("/events/:id",(req, res)=>{
     const eventid = req.params.id;
     if(events.length == 0){
         readData();
