@@ -29,7 +29,9 @@ app.get("/events/:id", (req, res)=>{
     }
     let foundRec = events.find((e) => e.eventId == eventid);
     if(foundRec == null)
+    {
         throw "The Event not found";
+    }   
     res.send(JSON.stringify(foundRec));
 });
 app.put("/events", (req, res)=>{
