@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventOrganizer</title>
+
+  
+    <script>
+  
+        function submit(){
+            var name=document.forms["myform"]["Name"]; 
+            
+            var password =   document.forms["myform"]["Pwd"];
+             if (name.value != "admin") { 
+                    window.alert("Please enter your name."); 
+                    name.focus(); 
+                    return false; 
+                } 
+  
+             if (password.value != "admin123") { 
+                    window.alert("Please enter your password."); 
+                    password.focus(); 
+                    return false; 
+                } 
+                return true;
+        }
+    </script>
+     <style>
+ *{
+    font-size: 18pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color:lightgreen;
+}
+.menu{
+    margin-left: 15px;
+    margin-top: 15px;
+    background-color: brown;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid gold;
+}
+a{
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+    height: 25px;
+    color: black;
+    background-color:blue;
+}
+a:hover{
+    background-color:white;
+}
+.heading{
+    font-size: 30pt;
+    text-align: center;
+    font-weight: bold;
+    color: brown;
+}
+.section{
+    display: inline-block;
+    margin:5px;
+    background-color: skyblue;
+    vertical-align: top;
+}
+img{
+    height: 400px;
+    width: 40%;
+}
+    </style>
+</head>
+<body>
+    
+        <nav class="menu">
+            <a href="Home.html">HOME</a>
+            <a href="About.html">ABOUT</a>
+            <a href="#">ADMIN</a>
+            <a href="user.html">USER</a>
+            <a href="View.html">View</a>
+            <a href="contact.html">CONTACT US</a>
+           
+        </nav>
+    <center><img src="event-organizer-.jpg" width="1600pt" height="600pt"></center>
+<form name=myform action="organizer_CRED.html" onsubmit="return submit()" method="GET">
+
+    <table align="center"  style="text-align: center;">
+        <tr>
+           <td colspan="2"><b>Enter The Admin Credentials</b></td> 
+        </tr>
+        <tr>
+            <td>
+                Name:
+            </td>
+            <td>
+                <input type="text"  name="Name" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                <input type="text"  name="Pwd" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="send" name="Submit" />
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
